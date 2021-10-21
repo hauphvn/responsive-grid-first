@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: yellow;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+
+  .pc, .tablet, .mobile {
+    margin: auto;
+    display: none;
+  }
+}
+
+// Responsive common for me
+//Mobile: width < 740px
+@media only screen and (max-width: 46.1875em) {
+  .container {
+    .mobile {
+      display: block;
+    }
+  }
+}
+
+//Table: 740px <= width < 1024px
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .container {
+    .tablet {
+      display: block;
+    }
+  }
+}
+
+//PC: width >= 1024px
+@media only screen and (min-width: 64em) {
+  .container {
+    .pc {
+      display: block;
+    }
+  }
+}
